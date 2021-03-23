@@ -148,6 +148,92 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://iattach.site/2021/03/23/git-ubuntu-%E7%94%A8%E6%B3%95-%E8%BF%9E%E6%8E%A5github/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Machilus Blois">
+      <meta itemprop="description" content="Iattach">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Iattach's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/23/git-ubuntu-%E7%94%A8%E6%B3%95-%E8%BF%9E%E6%8E%A5github/" class="post-title-link" itemprop="url">git ubuntu 用法 连接github</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-23 15:50:21 / Modified: 16:03:01" itemprop="dateCreated datePublished" datetime="2021-03-23T15:50:21+01:00">2021-03-23</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2021/03/23/git-ubuntu-%E7%94%A8%E6%B3%95-%E8%BF%9E%E6%8E%A5github/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/23/git-ubuntu-%E7%94%A8%E6%B3%95-%E8%BF%9E%E6%8E%A5github/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Git-初始-设置"><a href="#Git-初始-设置" class="headerlink" title="Git 初始 设置"></a>Git 初始 设置</h1><p>sudo apt install git</p>
+<p> 这里的“。。。。 ” 可以替换成自己的用户名</p>
+<p>git config –global user.name “。。。。”</p>
+<p> 这里的邮箱  。。。  替换成自己的邮箱</p>
+<p>git config –global user.email  “ 。。。 “</p>
+<h1 id="检查ssh-key"><a href="#检查ssh-key" class="headerlink" title="检查ssh key"></a>检查ssh key</h1><p>cd ~/.ssh</p>
+<p>ls</p>
+<p>列出该文件下的文件，看是否存在 id_isa 和 id_isa.pub 文件（也可以是别的文件名，只要 yourName 和 yourName.pub 承兑存在），如果存在的话，证明已经存在 ssh key了，可以直接跳过 生成密钥 这一步骤</p>
+<h1 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h1><p> 这里的邮箱  。。。  替换成自己的邮箱</p>
+<p>ssh-keygen -t rsa -C “。。。”</p>
+<p>连续3个回车。如果不需要密码的话。<br>最后得到了两个文件：id_rsa和id_rsa.pub。</p>
+<h1 id="添加密钥到ssh-agent"><a href="#添加密钥到ssh-agent" class="headerlink" title="添加密钥到ssh-agent"></a>添加密钥到ssh-agent</h1><h1 id="start-the-ssh-agent-in-the-background"><a href="#start-the-ssh-agent-in-the-background" class="headerlink" title="start the ssh-agent in the background"></a>start the ssh-agent in the background</h1><p>eval “$(ssh-agent -s)”</p>
+<p>ssh-add ~/.ssh/id_rsa</p>
+<p>最后吧id_rsa.pub的内容放到github上就行了</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://iattach.site/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -606,7 +692,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
