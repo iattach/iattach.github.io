@@ -148,6 +148,97 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://iattach.site/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Machilus Blois">
+      <meta itemprop="description" content="Iattach">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Iattach's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/" class="post-title-link" itemprop="url">ubuntu 20.04 增强功能安装 网络设置及其他</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-23 14:06:55 / Modified: 15:17:03" itemprop="dateCreated datePublished" datetime="2021-03-23T14:06:55+01:00">2021-03-23</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="安装增强功能"><a href="#安装增强功能" class="headerlink" title="安装增强功能"></a>安装增强功能</h1><p>因为cuda和cudnn的安装，ubuntu虚拟机的占用空间指数级增加。所以只好删了重装虚拟机，因为安装 virtual box 增强功能出现以下错误 Could not mount the media/drive ‘D:\Program Files\Oracle\VirtualBox/VBoxGuestAdditions.iso’ (VERR_PDM_MEDIA_LOCKED)。记录下处理步骤及后续处理，事实上ubuntu安装的时候，virtualbox就已经内置了一个虚拟光驱 VBox_GAs_6.1.18 ，所以执行脚本应该可以。先在vbox光驱 执行命令 </p>
+<p>sudo ./autorun.sh </p>
+<p>提示需要重启 启用kernel 于是重启</p>
+<p>刚才同时提示需要装gcc和其他一些东西， ok 先安装</p>
+<p>sudo apt-get update</p>
+<p>sudo apt-get install build-essential gcc make perl dkms</p>
+<p>reboot重启</p>
+<p>sudo ./autorun.sh </p>
+<p>reboot重启解决</p>
+<p>因为这个装好了 分辨率也可以选自动调整窗口大小 分辨率也就不用管了</p>
+<h1 id="黑屏时间较长-共享文件夹的问题"><a href="#黑屏时间较长-共享文件夹的问题" class="headerlink" title="黑屏时间较长 共享文件夹的问题"></a>黑屏时间较长 共享文件夹的问题</h1><p>但是重启的过程中发现 黑屏时间较长 网上找了下是共享文件夹的问题 确实 没办法打开sf_ubuntu</p>
+<p>若在设置共享目录时勾选了“自动挂载”，则guest中的Linux里什么都不用动，系统会自动在“/media”里建立以“sf_”为前缀并加上共享名的挂载点，比如你设置的共享名是“share”，那么这个挂载点就是“sf_share”，系统一启动就自动挂载好了。不过因为这个挂载点默认的权限是给vbox创建的用户组“vboxsf”的，你会无法查看，只需要修改“/etc/group”，把自己的用户名加入到“vboxsf”组就可以了。若这种情况下你又去手动修改“fstab”以实现自动挂载当然会失败。所以，若想通过“fstab”自动挂载，就要关掉共享目录设置中的“自动挂载”。注意 改的话 要用sudo 否则 没权限不能改</p>
+<h1 id="桌面快捷方式"><a href="#桌面快捷方式" class="headerlink" title="桌面快捷方式"></a>桌面快捷方式</h1><p>个人比较懒 给挂载的共享文件夹 再创个桌面快捷方式</p>
+<p>ln -s “/media/sf_ubuntu” ~/Desktop</p>
+<h1 id="主机和虚拟机共享同一局域网"><a href="#主机和虚拟机共享同一局域网" class="headerlink" title="主机和虚拟机共享同一局域网"></a>主机和虚拟机共享同一局域网</h1><p>最后解决下主机和虚拟机共享同一网络的问题</p>
+<p>网卡1，使用 仅主机(Host-Only)适配器 的连接方式，完成 即：从主机可以通过一个静态IP访问到每一个虚拟机，从虚拟机中可以访问主机（主机也有一个固定的静态IP）ubuntu 下 需要 ifconfig windows 需要ipconfig 可以确认两者处于同一局域网中</p>
+<p>如果要上网的话 另一个网卡设置nat网络转发就可以</p>
+<h1 id="ubuntu查看已安装所有软件包并卸载"><a href="#ubuntu查看已安装所有软件包并卸载" class="headerlink" title="ubuntu查看已安装所有软件包并卸载"></a>ubuntu查看已安装所有软件包并卸载</h1><p>dpkg -l –列出当前系统中所有的包.可以和参数less一起使用在分屏查看. (类似于rpm -qa)<br>dpkg -l |grep -i “软件包名” –查看系统中与”软件包名”相关联的包.</p>
+<p>sudo apt-get remove …. –purge </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://iattach.site/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -515,7 +606,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -543,7 +634,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

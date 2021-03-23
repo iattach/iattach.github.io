@@ -20,21 +20,19 @@
     var CONFIG = {"hostname":"iattach.site","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="应该是让·巴尔舰徽，更确切的说是为了纪念百度百科 - 让·巴尔将军而采用了他的个人纹章，但毛子稍微简化了下, 颜色也略微不同 徽章图案 参考维基，这是由路易十四在授爵诏书中授予给让·巴尔将军的徽章 “D’argent à la fasce d’azur chargée d’une fleur de lys d’or, accompagnée en chef de deux ancres de sa">
+  <meta name="description" content="安装增强功能因为cuda和cudnn的安装，ubuntu虚拟机的占用空间指数级增加。所以只好删了重装虚拟机，因为安装 virtual box 增强功能出现以下错误 Could not mount the media&#x2F;drive ‘D:\Program Files\Oracle\VirtualBox&#x2F;VBoxGuestAdditions.iso’ (VERR_PDM_MEDIA_LOCKED)。记录">
 <meta property="og:type" content="article">
-<meta property="og:title" content="让巴尔舰徽查证">
-<meta property="og:url" content="http://iattach.site/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/index.html">
+<meta property="og:title" content="ubuntu 20.04 增强功能安装 网络设置及其他">
+<meta property="og:url" content="http://iattach.site/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/index.html">
 <meta property="og:site_name" content="Iattach&#39;s blog">
-<meta property="og:description" content="应该是让·巴尔舰徽，更确切的说是为了纪念百度百科 - 让·巴尔将军而采用了他的个人纹章，但毛子稍微简化了下, 颜色也略微不同 徽章图案 参考维基，这是由路易十四在授爵诏书中授予给让·巴尔将军的徽章 “D’argent à la fasce d’azur chargée d’une fleur de lys d’or, accompagnée en chef de deux ancres de sa">
+<meta property="og:description" content="安装增强功能因为cuda和cudnn的安装，ubuntu虚拟机的占用空间指数级增加。所以只好删了重装虚拟机，因为安装 virtual box 增强功能出现以下错误 Could not mount the media&#x2F;drive ‘D:\Program Files\Oracle\VirtualBox&#x2F;VBoxGuestAdditions.iso’ (VERR_PDM_MEDIA_LOCKED)。记录">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://iattach.site/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/800px-Great_coat_of_arms_of_Jean_Bart.svg">
-<meta property="article:published_time" content="2020-12-04T17:44:10.000Z">
-<meta property="article:modified_time" content="2020-12-04T17:51:51.877Z">
+<meta property="article:published_time" content="2021-03-23T13:06:55.000Z">
+<meta property="article:modified_time" content="2021-03-23T14:17:03.166Z">
 <meta property="article:author" content="Machilus Blois">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://iattach.site/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/800px-Great_coat_of_arms_of_Jean_Bart.svg">
 
-<link rel="canonical" href="http://iattach.site/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/">
+<link rel="canonical" href="http://iattach.site/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/">
 
 
 <script id="page-configurations">
@@ -47,7 +45,7 @@
   };
 </script>
 
-  <title>让巴尔舰徽查证 | Iattach's blog</title>
+  <title>ubuntu 20.04 增强功能安装 网络设置及其他 | Iattach's blog</title>
   
 
 
@@ -153,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://iattach.site/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/">
+    <link itemprop="mainEntityOfPage" href="http://iattach.site/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -166,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          让巴尔舰徽查证
+          ubuntu 20.04 增强功能安装 网络设置及其他
         </h1>
 
         <div class="post-meta">
@@ -177,7 +175,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-12-04 18:44:10 / Modified: 18:51:51" itemprop="dateCreated datePublished" datetime="2020-12-04T18:44:10+01:00">2020-12-04</time>
+              <time title="Created: 2021-03-23 14:06:55 / Modified: 15:17:03" itemprop="dateCreated datePublished" datetime="2021-03-23T14:06:55+01:00">2021-03-23</time>
             </span>
 
           
@@ -189,8 +187,8 @@
       </span>
       <span class="post-meta-item-text">Valine: </span>
     
-    <a title="valine" href="/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -205,11 +203,25 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>应该是让·巴尔舰徽，更确切的说是为了纪念<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%AE%A9%C2%B7%E5%B7%B4%E5%B0%94/7829074">百度百科 - 让·巴尔将军</a>而采用了他的个人纹章，但毛子稍微简化了下, 颜色也略微不同</p>
-<p>徽章图案 参考<a target="_blank" rel="noopener" href="https://fr.wikipedia.org/wiki/Jean_Bart#Navires_du_nom_de_Jean_Bart">维基</a>，这是由路易十四在授爵诏书中授予给让·巴尔将军的徽章</p>
-<p><i>“D’argent à la fasce d’azur chargée d’une fleur de lys d’or, accompagnée en chef de deux ancres de sable en sautoir et en pointe d’un lion passant de gueules.”</i> </p>
-<p><i>其银色的基底装饰着镶有金色鸢尾花的天蓝色横带，顶部有成十字状的两个砂锚，底部尖端上有着成直纹红色的、作行走姿态的的狮子</i> </p>
-<p><img src="800px-Great_coat_of_arms_of_Jean_Bart.svg"></p>
+        <h1 id="安装增强功能"><a href="#安装增强功能" class="headerlink" title="安装增强功能"></a>安装增强功能</h1><p>因为cuda和cudnn的安装，ubuntu虚拟机的占用空间指数级增加。所以只好删了重装虚拟机，因为安装 virtual box 增强功能出现以下错误 Could not mount the media/drive ‘D:\Program Files\Oracle\VirtualBox/VBoxGuestAdditions.iso’ (VERR_PDM_MEDIA_LOCKED)。记录下处理步骤及后续处理，事实上ubuntu安装的时候，virtualbox就已经内置了一个虚拟光驱 VBox_GAs_6.1.18 ，所以执行脚本应该可以。先在vbox光驱 执行命令 </p>
+<p>sudo ./autorun.sh </p>
+<p>提示需要重启 启用kernel 于是重启</p>
+<p>刚才同时提示需要装gcc和其他一些东西， ok 先安装</p>
+<p>sudo apt-get update</p>
+<p>sudo apt-get install build-essential gcc make perl dkms</p>
+<p>reboot重启</p>
+<p>sudo ./autorun.sh </p>
+<p>reboot重启解决</p>
+<p>因为这个装好了 分辨率也可以选自动调整窗口大小 分辨率也就不用管了</p>
+<h1 id="黑屏时间较长-共享文件夹的问题"><a href="#黑屏时间较长-共享文件夹的问题" class="headerlink" title="黑屏时间较长 共享文件夹的问题"></a>黑屏时间较长 共享文件夹的问题</h1><p>但是重启的过程中发现 黑屏时间较长 网上找了下是共享文件夹的问题 确实 没办法打开sf_ubuntu</p>
+<p>若在设置共享目录时勾选了“自动挂载”，则guest中的Linux里什么都不用动，系统会自动在“/media”里建立以“sf_”为前缀并加上共享名的挂载点，比如你设置的共享名是“share”，那么这个挂载点就是“sf_share”，系统一启动就自动挂载好了。不过因为这个挂载点默认的权限是给vbox创建的用户组“vboxsf”的，你会无法查看，只需要修改“/etc/group”，把自己的用户名加入到“vboxsf”组就可以了。若这种情况下你又去手动修改“fstab”以实现自动挂载当然会失败。所以，若想通过“fstab”自动挂载，就要关掉共享目录设置中的“自动挂载”。注意 改的话 要用sudo 否则 没权限不能改</p>
+<h1 id="桌面快捷方式"><a href="#桌面快捷方式" class="headerlink" title="桌面快捷方式"></a>桌面快捷方式</h1><p>个人比较懒 给挂载的共享文件夹 再创个桌面快捷方式</p>
+<p>ln -s “/media/sf_ubuntu” ~/Desktop</p>
+<h1 id="主机和虚拟机共享同一局域网"><a href="#主机和虚拟机共享同一局域网" class="headerlink" title="主机和虚拟机共享同一局域网"></a>主机和虚拟机共享同一局域网</h1><p>最后解决下主机和虚拟机共享同一网络的问题</p>
+<p>网卡1，使用 仅主机(Host-Only)适配器 的连接方式，完成 即：从主机可以通过一个静态IP访问到每一个虚拟机，从虚拟机中可以访问主机（主机也有一个固定的静态IP）ubuntu 下 需要 ifconfig windows 需要ipconfig 可以确认两者处于同一局域网中</p>
+<p>如果要上网的话 另一个网卡设置nat网络转发就可以</p>
+<h1 id="ubuntu查看已安装所有软件包并卸载"><a href="#ubuntu查看已安装所有软件包并卸载" class="headerlink" title="ubuntu查看已安装所有软件包并卸载"></a>ubuntu查看已安装所有软件包并卸载</h1><p>dpkg -l –列出当前系统中所有的包.可以和参数less一起使用在分屏查看. (类似于rpm -qa)<br>dpkg -l |grep -i “软件包名” –查看系统中与”软件包名”相关联的包.</p>
+<p>sudo apt-get remove …. –purge </p>
 
     </div>
 
@@ -225,13 +237,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/09/12/%E7%BA%AA%E5%BF%B5%E7%AC%AC%E4%B8%80%E6%A0%B9%E7%99%BD%E5%A4%B4%E5%8F%91/" rel="prev" title="纪念第一根白头发">
-      <i class="fa fa-chevron-left"></i> 纪念第一根白头发
+    <a href="/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/" rel="prev" title="让巴尔舰徽查证">
+      <i class="fa fa-chevron-left"></i> 让巴尔舰徽查证
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/" rel="next" title="ubuntu 20.04 增强功能安装 网络设置及其他">
-      ubuntu 20.04 增强功能安装 网络设置及其他 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -291,6 +300,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD"><span class="nav-number">1.</span> <span class="nav-text">安装增强功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%BB%91%E5%B1%8F%E6%97%B6%E9%97%B4%E8%BE%83%E9%95%BF-%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">黑屏时间较长 共享文件夹的问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A1%8C%E9%9D%A2%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">桌面快捷方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BB%E6%9C%BA%E5%92%8C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%85%B1%E4%BA%AB%E5%90%8C%E4%B8%80%E5%B1%80%E5%9F%9F%E7%BD%91"><span class="nav-number">4.</span> <span class="nav-text">主机和虚拟机共享同一局域网</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ubuntu%E6%9F%A5%E7%9C%8B%E5%B7%B2%E5%AE%89%E8%A3%85%E6%89%80%E6%9C%89%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%B9%B6%E5%8D%B8%E8%BD%BD"><span class="nav-number">5.</span> <span class="nav-text">ubuntu查看已安装所有软件包并卸载</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
