@@ -3,7 +3,34 @@
     <id>https://hexo.iattach.top</id>
     <title>iattachの小站</title>
     <link href="https://hexo.iattach.top" />
-    <updated>2021-03-23T14:50:21.000Z</updated>
+    <updated>2021-12-21T12:16:37.000Z</updated>
+    <entry>
+        <id>https://hexo.iattach.top/2021/12/21/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/</id>
+        <title>建站过程</title>
+        <link rel="alternate" href="https://hexo.iattach.top/2021/12/21/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/"/>
+        <content type="html">&lt;h1 id=&#34;建站架构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#建站架构&#34;&gt;#&lt;/a&gt; 建站架构&lt;/h1&gt;
+&lt;p&gt;建立本站采用的是 namesilo 的域名 (续费比较便宜)，dns 服务由 dnspod 提供，服务器由 github pages 提供。所以只有的一个域名要钱～&lt;/p&gt;
+&lt;h1 id=&#34;namesilo&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#namesilo&#34;&gt;#&lt;/a&gt; Namesilo&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubmFtZXNpbG8uY29tLyVFRiVCQyU4QyVFOSU4MCU4OSVFNCVCOCVBQSVFNCVCRSVCRiVFNSVBRSU5QyVFNyU5QSU4NCVFNSU5RiU5RiVFNSU5MCU4RCVFRiVCQyU4QyVFNSU4RiVBRiVFNCVCQiVBNSVFNyU5NCVBOCVFNiU5NCVBRiVFNCVCQiU5OCVFNSVBRSU5RCVFNiU5NCVBRiVFNCVCQiU5OCVFMyU4MCU4MiVFNSVBNiU4MiVFNiU5RSU5Q2Ruc3BvZCVFOCVBRSVCRSVFNyVCRCVBRSVFNSVBNSVCRHVybCVFNCVCQSU4NiVFRiVCQyU4Q2Ruc3BvZCVFNCVCQyU5QSVFNiU4RiU5MCVFNCVCRSU5QiVFNCVCOCVBNCVFNCVCOCVBQXVybCVFOCVBRSVBOSVFNCVCRCVBMCVFNiU5NCVCOW5hbWVzaWxvJUU3JTlBJTg0bmFtZQ==&#34;&gt;https://www.namesilo.com/，选个便宜的域名，可以用支付宝支付。如果 dnspod 设置好 url 了，dnspod 会提供两个 url 让你改 namesilo 的 name&lt;/span&gt; server，填上去就行。&lt;/p&gt;
+&lt;p&gt;域名续费可以直接点 renew 的按钮，一次性可以续好几年，美元汇率低的时候多续几年？&lt;/p&gt;
+&lt;h1 id=&#34;dnspod&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dnspod&#34;&gt;#&lt;/a&gt; dnspod&lt;/h1&gt;
+&lt;p&gt;dnspod 配合 github pages 需要解析主机记录。如果是 @记录，比较推荐这种，就直接是 A 类型，挂两个 github 的 ip 地址，四选一，这样可以方便 https 解析&lt;/p&gt;
+&lt;p&gt;185.199.108.153&lt;br /&gt;
+185.199.109.153&lt;br /&gt;
+185.199.110.153&lt;br /&gt;
+185.199.111.153&lt;/p&gt;
+&lt;p&gt;如果是子域名记录，需要改为 CNAME 类型，挂 xxx.github.io 的地址，这里 xxx 是 github 的用户名。因为尝试过用 A 类型，但是 github pages 不支持解析，并提示要 CNAME。&lt;/p&gt;
+&lt;p&gt;WWW 记录也是有必要加的，如果域名是 aaa.bbb，那么主机记录为 www，类型 CNAME，挂 xxx.github.io 的地址。如果是子域名 aaa.bbb.ccc, 那么主机记录为 www.aaa，类型 CNAME，挂 xxx.github.io 的地址。&lt;/p&gt;
+&lt;p&gt;ssl 证书申请并不是主域名申请完，子域名也用同样的主域名的证书。每个主域名和子域名都需要单独申请。至于有没有用，dnspod 可以看 ssl 图标有没有变为绿色，如果是绿色，代表证书启用。&lt;/p&gt;
+&lt;h1 id=&#34;github-pages&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#github-pages&#34;&gt;#&lt;/a&gt; github pages&lt;/h1&gt;
+&lt;p&gt;本站的架构启用的是 hexo 的静态页面架构处理，因为 github pages 不支持动态页面加载，都已经免费了，还要什么自行车。hexo + npm 安装插件，具体命令 hexo 的 repo 有给：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLyVFRiVCQyU4QyVFNCVCOCVCQiVFOSVBMiU5OCVFNyU5QSU4NCVFNiU5QiVCNCVFNiU4RCVBMiVFNCVCOSU5RiVFOSU5RCU5RSVFNSVCOCVCOCVFNiU5NiVCOSVFNCVCRSVCRiVFRiVCQyU4QyVFNiU5QyVBQyVFNyVBQiU5OSVFOSU4NyU4NyVFNyU5NCVBOCVFNyU5QSU4NCVFNiU5OCVBRnNob2thJUU0JUI4JUJCJUU5JUEyJTk4JUVGJUJDJTlBaHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYSVFMyU4MCU4MiVFOSVBMSVCQSVFNSVCQSU4RiVFNCVCOCVCQSVFNSU4NSU4OCVFNSVCQyU4NCVFNSVBRSU4Q2hleG8lRTUlODYlOEQlRTglQTMlODUlRTglQkQlQkQlRTUlQUYlQjklRTUlQkElOTQlRTclOUElODQlRTQlQjglQkIlRTklQTIlOTglRTMlODAlODI=&#34;&gt;https://hexo.io/，主题的更换也非常方便，本站采用的是 shoka 主题：https://github.com/amehime/hexo-theme-shoka。顺序为先弄完 hexo 再装载对应的主题。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;首先需要在 github 上建立 xxx.github.io 的 repo，xxx 是用户名。建完后，push 一个 index.html 上去，浏览器打开 xxx.github.io 的链接就可以看到 index.html 内容。注意这里浏览器的地址只有 http，其次域名是 github.io 的子域名。&lt;/p&gt;
+&lt;p&gt;所以我们着重要将的是域名转写，由 github 配合 dnspod 完成，dnspod 前面有讲，这里不赘述。github 在 repo 的 settings 的选项，左侧倒数的选项中有 pages 的这个设置，这里可以设置域名，如果是子域名，就是 dnspod 对应的域名解析记录的子域名，这个必须一致。save 过后，github 会自动检测 dns 的设置。注意这个域名与 repo 中的 CNAME 文件挂钩，如果 CNAME 文件 push 后改变，那这里的域名也会随之而变。当自己的域名检测通过后，可以开启 https 选项，点击下方的 Enforce HTTPS 的选项，貌似 dnspod 的 ssl 证书没有，也能自动开启？最好也申请对应的域名 / 子域名的 ssl 证书。当然这样弄完的话，即使输入 xxx.github.io 也会自动跳转设置好的域名。&lt;/p&gt;
+&lt;p&gt;有时候 https 会显示不正确，即打开对应域名地址，浏览器不信任域名的 ssl 证书。一般是 github 没有更新 ip 的问题，具体参考 https://www.jianshu.com/p/739742f3afc4，先在 github 上或者 hexo 本地的 public 中删除 CNAME 文件，然后上传改动。之后重新添加，这样 github 会重新 build 项目的主页。另外注意所有 hexo 中 config 里面的 http 域名地址都必须改为 https 前缀，否则会有失效的可能。&lt;/p&gt;
+&lt;p&gt;到此，基本的配置就已完成。&lt;/p&gt;
+</content>
+        <updated>2021-12-21T12:16:37.000Z</updated>
+    </entry>
     <entry>
         <id>https://hexo.iattach.top/2021/03/23/git-ubuntu-%E7%94%A8%E6%B3%95-%E8%BF%9E%E6%8E%A5github/</id>
         <title>git ubuntu 用法 连接github</title>
