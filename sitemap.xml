@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hexo.iattach.top/2021/12/21/%E5%BA%94%E7%94%A8hexo-shoka%E4%B8%BB%E9%A2%98%E7%9A%84%E5%B0%8F%E5%9D%91/</loc>
+    
+    <lastmod>2021-12-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hexo.iattach.top/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/</loc>
+    
+    <lastmod>2021-12-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hexo.iattach.top/2021/03/23/git-ubuntu-%E7%94%A8%E6%B3%95-%E8%BF%9E%E6%8E%A5github/</loc>
+    
+    <lastmod>2021-12-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hexo.iattach.top/2021/12/21/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/</loc>
     
     <lastmod>2021-12-21</lastmod>
@@ -11,25 +38,7 @@
   </url>
   
   <url>
-    <loc>https://hexo.iattach.top/about/index.html</loc>
-    
-    <lastmod>2021-11-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://hexo.iattach.top/bangumi/index.html</loc>
-    
-    <lastmod>2021-11-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hexo.iattach.top/client/index.html</loc>
     
     <lastmod>2021-11-09</lastmod>
     
@@ -56,6 +65,33 @@
   </url>
   
   <url>
+    <loc>https://hexo.iattach.top/client/index.html</loc>
+    
+    <lastmod>2021-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hexo.iattach.top/about/index.html</loc>
+    
+    <lastmod>2021-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hexo.iattach.top/music/index.html</loc>
+    
+    <lastmod>2021-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hexo.iattach.top/links/index.html</loc>
     
     <lastmod>2021-11-09</lastmod>
@@ -74,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://hexo.iattach.top/music/index.html</loc>
+    <loc>https://hexo.iattach.top/rss/index.html</loc>
     
     <lastmod>2021-11-09</lastmod>
     
@@ -92,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://hexo.iattach.top/rss/index.html</loc>
+    <loc>https://hexo.iattach.top/theme-sakura/index.html</loc>
     
     <lastmod>2021-11-09</lastmod>
     
@@ -104,33 +140,6 @@
     <loc>https://hexo.iattach.top/video/index.html</loc>
     
     <lastmod>2021-11-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hexo.iattach.top/theme-sakura/index.html</loc>
-    
-    <lastmod>2021-11-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hexo.iattach.top/2021/03/23/git-ubuntu-%E7%94%A8%E6%B3%95-%E8%BF%9E%E6%8E%A5github/</loc>
-    
-    <lastmod>2021-03-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hexo.iattach.top/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/</loc>
-    
-    <lastmod>2021-03-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -185,6 +194,13 @@
   
   <url>
     <loc>https://hexo.iattach.top/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2021-12-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hexo.iattach.top/categories/%E5%9D%91/</loc>
     <lastmod>2021-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
