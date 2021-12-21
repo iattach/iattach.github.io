@@ -2,15 +2,29 @@
 <rss version="2.0">
     <channel>
         <title>iattachの小站</title>
+        <subtitle>Where is the end of the humain?</subtitle>
+        <icon>https://hexo.iattach.top/images/favicon.ico</icon>
         <link>https://hexo.iattach.top</link>
+        <author>
+          <name>iattach</name>
+        </author>
         <description>Why worry about something that isn&#39;t going to happen ?</description>
         <language>en</language>
         <pubDate>Tue, 21 Dec 2021 13:16:37 +0100</pubDate>
         <lastBuildDate>Tue, 21 Dec 2021 13:16:37 +0100</lastBuildDate>
+        <category term="Game" />
+        <category term="Animée" />
+        <category term="Life" />
+        <category term="Study" />
+        <category term="游戏" />
+        <category term="动漫" />
+        <category term="生活" />
+        <category term="学习" />
         <item>
             <guid isPermalink="true">https://hexo.iattach.top/2021/12/21/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/</guid>
             <title>建站过程</title>
             <link>https://hexo.iattach.top/2021/12/21/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/</link>
+            <category term="技术" scheme="https://hexo.iattach.top/categories/%E6%8A%80%E6%9C%AF/" />
             <pubDate>Tue, 21 Dec 2021 13:16:37 +0100</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;建站架构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#建站架构&#34;&gt;#&lt;/a&gt; 建站架构&lt;/h1&gt;
 &lt;p&gt;建立本站采用的是 namesilo 的域名 (续费比较便宜)，dns 服务由 dnspod 提供，服务器由 github pages 提供。所以只有的一个域名要钱～&lt;/p&gt;

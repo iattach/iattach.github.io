@@ -2,8 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://hexo.iattach.top</id>
     <title>iattachの小站</title>
+    <subtitle>Where is the end of the humain?</subtitle>
+    <icon>https://hexo.iattach.top/images/favicon.ico</icon>
     <link href="https://hexo.iattach.top" />
+    <author>
+      <name>iattach</name>
+    </author>
     <updated>2021-12-21T12:16:37.000Z</updated>
+    <category term="Game" />
+    <category term="Animée" />
+    <category term="Life" />
+    <category term="Study" />
+    <category term="游戏" />
+    <category term="动漫" />
+    <category term="生活" />
+    <category term="学习" />
     <entry>
         <id>https://hexo.iattach.top/2021/12/21/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/</id>
         <title>建站过程</title>
@@ -29,6 +42,7 @@
 &lt;p&gt;有时候 https 会显示不正确，即打开对应域名地址，浏览器不信任域名的 ssl 证书。一般是 github 没有更新 ip 的问题，具体参考 https://www.jianshu.com/p/739742f3afc4，先在 github 上或者 hexo 本地的 public 中删除 CNAME 文件，然后上传改动。之后重新添加，这样 github 会重新 build 项目的主页。另外注意所有 hexo 中 config 里面的 http 域名地址都必须改为 https 前缀，否则会有失效的可能。&lt;/p&gt;
 &lt;p&gt;到此，基本的配置就已完成。&lt;/p&gt;
 </content>
+        <category term="技术" scheme="https://hexo.iattach.top/categories/%E6%8A%80%E6%9C%AF/" />
         <updated>2021-12-21T12:16:37.000Z</updated>
     </entry>
     <entry>
