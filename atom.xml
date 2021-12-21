@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://iattach.xyz</id>
+    <id>https://iattach.top</id>
     <title>iattachの小站</title>
-    <link href="https://iattach.xyz" />
+    <link href="https://iattach.top" />
     <updated>2021-03-23T14:50:21.000Z</updated>
     <entry>
-        <id>https://iattach.xyz/2021/03/23/git-ubuntu-%E7%94%A8%E6%B3%95-%E8%BF%9E%E6%8E%A5github/</id>
+        <id>https://iattach.top/2021/03/23/git-ubuntu-%E7%94%A8%E6%B3%95-%E8%BF%9E%E6%8E%A5github/</id>
         <title>git ubuntu 用法 连接github</title>
-        <link rel="alternate" href="https://iattach.xyz/2021/03/23/git-ubuntu-%E7%94%A8%E6%B3%95-%E8%BF%9E%E6%8E%A5github/"/>
+        <link rel="alternate" href="https://iattach.top/2021/03/23/git-ubuntu-%E7%94%A8%E6%B3%95-%E8%BF%9E%E6%8E%A5github/"/>
         <content type="html">&lt;h1 id=&#34;git-初始-设置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git-初始-设置&#34;&gt;#&lt;/a&gt; Git 初始 设置&lt;/h1&gt;
 &lt;p&gt;sudo apt install git&lt;/p&gt;
 &lt;p&gt;这里的 “。。。。” 可以替换成自己的用户名&lt;/p&gt;
@@ -32,9 +32,9 @@
         <updated>2021-03-23T14:50:21.000Z</updated>
     </entry>
     <entry>
-        <id>https://iattach.xyz/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/</id>
+        <id>https://iattach.top/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/</id>
         <title>ubuntu 20.04 增强功能安装 网络设置及其他</title>
-        <link rel="alternate" href="https://iattach.xyz/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/"/>
+        <link rel="alternate" href="https://iattach.top/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/"/>
         <content type="html">&lt;h1 id=&#34;安装增强功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装增强功能&#34;&gt;#&lt;/a&gt; 安装增强功能&lt;/h1&gt;
 &lt;p&gt;因为 cuda 和 cudnn 的安装，ubuntu 虚拟机的占用空间指数级增加。所以只好删了重装虚拟机，因为安装 virtual box 增强功能出现以下错误 Could not mount the media/drive &#39;D:\Program Files\Oracle\VirtualBox/VBoxGuestAdditions.iso&#39; (VERR_PDM_MEDIA_LOCKED)。记录下处理步骤及后续处理，事实上 ubuntu 安装的时候，virtualbox 就已经内置了一个虚拟光驱 VBox_GAs_6.1.18 ，所以执行脚本应该可以。先在 vbox 光驱 执行命令&lt;/p&gt;
 &lt;p&gt;sudo ./autorun.sh&lt;/p&gt;
@@ -64,9 +64,9 @@
         <updated>2021-03-23T13:06:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://iattach.xyz/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/</id>
+        <id>https://iattach.top/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/</id>
         <title>让巴尔舰徽查证</title>
-        <link rel="alternate" href="https://iattach.xyz/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/"/>
+        <link rel="alternate" href="https://iattach.top/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/"/>
         <content type="html">&lt;p&gt;应该是让・巴尔舰徽，更确切的说是为了纪念&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTglQUUlQTklQzIlQjclRTUlQjclQjQlRTUlQjAlOTQvNzgyOTA3NA==&#34;&gt;百度百科 - 让・巴尔将军&lt;/span&gt;而采用了他的个人纹章，但毛子稍微简化了下，颜色也略微不同&lt;/p&gt;
 &lt;p&gt;徽章图案 参考&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mci53aWtpcGVkaWEub3JnL3dpa2kvSmVhbl9CYXJ0I05hdmlyZXNfZHVfbm9tX2RlX0plYW5fQmFydA==&#34;&gt;维基&lt;/span&gt;，这是由路易十四在授爵诏书中授予给让・巴尔将军的徽章&lt;/p&gt;
 &lt;p&gt;&amp;lt;i&amp;gt;&amp;quot;D&#39;argent à la fasce d&#39;azur chargée d&#39;une fleur de lys d&#39;or, accompagnée en chef de deux ancres de sable en sautoir et en pointe d&#39;un lion passant de gueules.&amp;quot;&amp;lt;/i&amp;gt;&lt;/p&gt;
@@ -76,25 +76,25 @@
         <updated>2020-12-04T17:44:10.000Z</updated>
     </entry>
     <entry>
-        <id>https://iattach.xyz/2020/09/12/%E7%BA%AA%E5%BF%B5%E7%AC%AC%E4%B8%80%E6%A0%B9%E7%99%BD%E5%A4%B4%E5%8F%91/</id>
+        <id>https://iattach.top/2020/09/12/%E7%BA%AA%E5%BF%B5%E7%AC%AC%E4%B8%80%E6%A0%B9%E7%99%BD%E5%A4%B4%E5%8F%91/</id>
         <title>纪念第一根白头发</title>
-        <link rel="alternate" href="https://iattach.xyz/2020/09/12/%E7%BA%AA%E5%BF%B5%E7%AC%AC%E4%B8%80%E6%A0%B9%E7%99%BD%E5%A4%B4%E5%8F%91/"/>
+        <link rel="alternate" href="https://iattach.top/2020/09/12/%E7%BA%AA%E5%BF%B5%E7%AC%AC%E4%B8%80%E6%A0%B9%E7%99%BD%E5%A4%B4%E5%8F%91/"/>
         <content type="html">&lt;p&gt;早上起来 无意间照镜子发现了根白发 www&lt;br /&gt;
 &lt;img data-src=&#34;20200912075459.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </content>
         <updated>2020-09-12T05:50:25.000Z</updated>
     </entry>
     <entry>
-        <id>https://iattach.xyz/2020/08/23/create-site/</id>
+        <id>https://iattach.top/2020/08/23/create-site/</id>
         <title>create site</title>
-        <link rel="alternate" href="https://iattach.xyz/2020/08/23/create-site/"/>
+        <link rel="alternate" href="https://iattach.top/2020/08/23/create-site/"/>
         <content type="html"></content>
         <updated>2020-08-23T06:39:29.000Z</updated>
     </entry>
     <entry>
-        <id>https://iattach.xyz/2020/08/23/hello-world/</id>
+        <id>https://iattach.top/2020/08/23/hello-world/</id>
         <title>Hello World</title>
-        <link rel="alternate" href="https://iattach.xyz/2020/08/23/hello-world/"/>
+        <link rel="alternate" href="https://iattach.top/2020/08/23/hello-world/"/>
         <content type="html">&lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
 &lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;

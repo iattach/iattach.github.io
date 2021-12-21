@@ -2,51 +2,51 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "iattachの小站",
     "description": "Why worry about something that isn't going to happen ?",
-    "home_page_url": "https://iattach.xyz",
+    "home_page_url": "https://iattach.top",
     "items": [
         {
-            "id": "https://iattach.xyz/2021/03/23/git-ubuntu-%E7%94%A8%E6%B3%95-%E8%BF%9E%E6%8E%A5github/",
-            "url": "https://iattach.xyz/2021/03/23/git-ubuntu-%E7%94%A8%E6%B3%95-%E8%BF%9E%E6%8E%A5github/",
+            "id": "https://iattach.top/2021/03/23/git-ubuntu-%E7%94%A8%E6%B3%95-%E8%BF%9E%E6%8E%A5github/",
+            "url": "https://iattach.top/2021/03/23/git-ubuntu-%E7%94%A8%E6%B3%95-%E8%BF%9E%E6%8E%A5github/",
             "title": "git ubuntu 用法 连接github",
             "date_published": "2021-03-23T14:50:21.000Z",
             "content_html": "<h1 id=\"git-初始-设置\"><a class=\"anchor\" href=\"#git-初始-设置\">#</a> Git 初始 设置</h1>\n<p>sudo apt install git</p>\n<p>这里的 “。。。。” 可以替换成自己的用户名</p>\n<p>git config --global <span class=\"exturl\" data-url=\"aHR0cDovL3VzZXIubmFtZQ==\">user.name</span> &quot;。。。。&quot;</p>\n<p>这里的邮箱  。。。  替换成自己的邮箱</p>\n<p>git config --global user.email  &quot; 。。。 &quot;</p>\n<h1 id=\"检查ssh-key\"><a class=\"anchor\" href=\"#检查ssh-key\">#</a> 检查 ssh key</h1>\n<p>cd ~/.ssh</p>\n<p>ls</p>\n<p>列出该文件下的文件，看是否存在 id_isa 和 id_isa.pub 文件（也可以是别的文件名，只要 yourName 和 yourName.pub 承兑存在），如果存在的话，证明已经存在 ssh key 了，可以直接跳过 生成密钥 这一步骤</p>\n<h1 id=\"生成密钥\"><a class=\"anchor\" href=\"#生成密钥\">#</a> 生成密钥</h1>\n<p>这里的邮箱  。。。  替换成自己的邮箱</p>\n<p>ssh-keygen -t rsa -C &quot;。。。&quot;</p>\n<p>连续 3 个回车。如果不需要密码的话。<br />\n最后得到了两个文件：id_rsa 和 id_rsa.pub。</p>\n<h1 id=\"添加密钥到ssh-agent\"><a class=\"anchor\" href=\"#添加密钥到ssh-agent\">#</a> 添加密钥到 ssh-agent</h1>\n<h1 id=\"start-the-ssh-agent-in-the-background\"><a class=\"anchor\" href=\"#start-the-ssh-agent-in-the-background\">#</a> start the ssh-agent in the background</h1>\n<p>eval &quot;$(ssh-agent -s)&quot;</p>\n<p>ssh-add ~/.ssh/id_rsa</p>\n<p>最后吧 id_rsa.pub 的内容放到 github 上就行了</p>\n",
             "tags": []
         },
         {
-            "id": "https://iattach.xyz/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/",
-            "url": "https://iattach.xyz/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/",
+            "id": "https://iattach.top/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/",
+            "url": "https://iattach.top/2021/03/23/ubuntu-20-04-%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD%E5%AE%89%E8%A3%85-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E5%85%B6%E4%BB%96/",
             "title": "ubuntu 20.04 增强功能安装 网络设置及其他",
             "date_published": "2021-03-23T13:06:55.000Z",
             "content_html": "<h1 id=\"安装增强功能\"><a class=\"anchor\" href=\"#安装增强功能\">#</a> 安装增强功能</h1>\n<p>因为 cuda 和 cudnn 的安装，ubuntu 虚拟机的占用空间指数级增加。所以只好删了重装虚拟机，因为安装 virtual box 增强功能出现以下错误 Could not mount the media/drive 'D:\\Program Files\\Oracle\\VirtualBox/VBoxGuestAdditions.iso' (VERR_PDM_MEDIA_LOCKED)。记录下处理步骤及后续处理，事实上 ubuntu 安装的时候，virtualbox 就已经内置了一个虚拟光驱 VBox_GAs_6.1.18 ，所以执行脚本应该可以。先在 vbox 光驱 执行命令</p>\n<p>sudo ./autorun.sh</p>\n<p>提示需要重启 启用 kernel 于是重启</p>\n<p>刚才同时提示需要装 gcc 和其他一些东西， ok 先安装</p>\n<p>sudo apt-get update</p>\n<p>sudo apt-get install build-essential gcc make perl dkms</p>\n<p>reboot 重启</p>\n<p>sudo ./autorun.sh</p>\n<p>reboot 重启解决</p>\n<p>因为这个装好了 分辨率也可以选自动调整窗口大小 分辨率也就不用管了</p>\n<h1 id=\"黑屏时间较长-共享文件夹的问题\"><a class=\"anchor\" href=\"#黑屏时间较长-共享文件夹的问题\">#</a> 黑屏时间较长 共享文件夹的问题</h1>\n<p>但是重启的过程中发现 黑屏时间较长 网上找了下是共享文件夹的问题 确实 没办法打开 sf_ubuntu</p>\n<p>若在设置共享目录时勾选了 “自动挂载”，则 guest 中的 Linux 里什么都不用动，系统会自动在 “/media” 里建立以 “sf_” 为前缀并加上共享名的挂载点，比如你设置的共享名是 “share”，那么这个挂载点就是 “sf_share”，系统一启动就自动挂载好了。不过因为这个挂载点默认的权限是给 vbox 创建的用户组 “vboxsf” 的，你会无法查看，只需要修改 “/etc/group”，把自己的用户名加入到 “vboxsf” 组就可以了。若这种情况下你又去手动修改 “fstab” 以实现自动挂载当然会失败。所以，若想通过 “fstab” 自动挂载，就要关掉共享目录设置中的 “自动挂载”。注意 改的话 要用 sudo 否则 没权限不能改</p>\n<h1 id=\"桌面快捷方式\"><a class=\"anchor\" href=\"#桌面快捷方式\">#</a> 桌面快捷方式</h1>\n<p>个人比较懒 给挂载的共享文件夹 再创个桌面快捷方式</p>\n<p>ln -s &quot;/media/sf_ubuntu&quot; ~/Desktop</p>\n<h1 id=\"主机和虚拟机共享同一局域网\"><a class=\"anchor\" href=\"#主机和虚拟机共享同一局域网\">#</a> 主机和虚拟机共享同一局域网</h1>\n<p>最后解决下主机和虚拟机共享同一网络的问题</p>\n<p>网卡 1，使用 仅主机 (Host-Only) 适配器 的连接方式，完成 即：从主机可以通过一个静态 IP 访问到每一个虚拟机，从虚拟机中可以访问主机（主机也有一个固定的静态 IP）ubuntu 下 需要 ifconfig windows 需要 ipconfig 可以确认两者处于同一局域网中</p>\n<p>如果要上网的话 另一个网卡设置 nat 网络转发就可以</p>\n<h1 id=\"ubuntu查看已安装所有软件包并卸载\"><a class=\"anchor\" href=\"#ubuntu查看已安装所有软件包并卸载\">#</a> ubuntu 查看已安装所有软件包并卸载</h1>\n<p>dpkg -l -- 列出当前系统中所有的包。可以和参数 less 一起使用在分屏查看. (类似于 rpm -qa)<br />\n dpkg -l |grep -i &quot;软件包名&quot; -- 查看系统中与 &quot;软件包名&quot; 相关联的包.</p>\n<p>sudo apt-get remove .... --purge</p>\n",
             "tags": []
         },
         {
-            "id": "https://iattach.xyz/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/",
-            "url": "https://iattach.xyz/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/",
+            "id": "https://iattach.top/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/",
+            "url": "https://iattach.top/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/",
             "title": "让巴尔舰徽查证",
             "date_published": "2020-12-04T17:44:10.000Z",
             "content_html": "<p>应该是让・巴尔舰徽，更确切的说是为了纪念<span class=\"exturl\" data-url=\"aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTglQUUlQTklQzIlQjclRTUlQjclQjQlRTUlQjAlOTQvNzgyOTA3NA==\">百度百科 - 让・巴尔将军</span>而采用了他的个人纹章，但毛子稍微简化了下，颜色也略微不同</p>\n<p>徽章图案 参考<span class=\"exturl\" data-url=\"aHR0cHM6Ly9mci53aWtpcGVkaWEub3JnL3dpa2kvSmVhbl9CYXJ0I05hdmlyZXNfZHVfbm9tX2RlX0plYW5fQmFydA==\">维基</span>，这是由路易十四在授爵诏书中授予给让・巴尔将军的徽章</p>\n<p>&lt;i&gt;&quot;D'argent à la fasce d'azur chargée d'une fleur de lys d'or, accompagnée en chef de deux ancres de sable en sautoir et en pointe d'un lion passant de gueules.&quot;&lt;/i&gt;</p>\n<p>&lt;i&gt; 其银色的基底装饰着镶有金色鸢尾花的天蓝色横带，顶部有成十字状的两个砂锚，底部尖端上有着成直纹红色的、作行走姿态的的狮子 &lt;/i&gt;</p>\n<p><img data-src=\"800px-Great_coat_of_arms_of_Jean_Bart.svg\" alt=\"\" /></p>\n",
             "tags": []
         },
         {
-            "id": "https://iattach.xyz/2020/09/12/%E7%BA%AA%E5%BF%B5%E7%AC%AC%E4%B8%80%E6%A0%B9%E7%99%BD%E5%A4%B4%E5%8F%91/",
-            "url": "https://iattach.xyz/2020/09/12/%E7%BA%AA%E5%BF%B5%E7%AC%AC%E4%B8%80%E6%A0%B9%E7%99%BD%E5%A4%B4%E5%8F%91/",
+            "id": "https://iattach.top/2020/09/12/%E7%BA%AA%E5%BF%B5%E7%AC%AC%E4%B8%80%E6%A0%B9%E7%99%BD%E5%A4%B4%E5%8F%91/",
+            "url": "https://iattach.top/2020/09/12/%E7%BA%AA%E5%BF%B5%E7%AC%AC%E4%B8%80%E6%A0%B9%E7%99%BD%E5%A4%B4%E5%8F%91/",
             "title": "纪念第一根白头发",
             "date_published": "2020-09-12T05:50:25.000Z",
             "content_html": "<p>早上起来 无意间照镜子发现了根白发 www<br />\n<img data-src=\"20200912075459.jpg\" alt=\"\" /></p>\n",
             "tags": []
         },
         {
-            "id": "https://iattach.xyz/2020/08/23/create-site/",
-            "url": "https://iattach.xyz/2020/08/23/create-site/",
+            "id": "https://iattach.top/2020/08/23/create-site/",
+            "url": "https://iattach.top/2020/08/23/create-site/",
             "title": "create site",
             "date_published": "2020-08-23T06:39:29.000Z",
             "content_html": "",
             "tags": []
         },
         {
-            "id": "https://iattach.xyz/2020/08/23/hello-world/",
-            "url": "https://iattach.xyz/2020/08/23/hello-world/",
+            "id": "https://iattach.top/2020/08/23/hello-world/",
+            "url": "https://iattach.top/2020/08/23/hello-world/",
             "title": "Hello World",
             "date_published": "2020-08-23T06:30:44.116Z",
             "content_html": "<p>Welcome to <span class=\"exturl\" data-url=\"aHR0cHM6Ly9oZXhvLmlvLw==\">Hexo</span>! This is your very first post. Check <span class=\"exturl\" data-url=\"aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv\">documentation</span> for more info. If you get any problems when using Hexo, you can find the answer in <span class=\"exturl\" data-url=\"aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=\">troubleshooting</span> or you can ask me on <span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==\">GitHub</span>.</p>\n<h2 id=\"quick-start\"><a class=\"anchor\" href=\"#quick-start\">#</a> Quick Start</h2>\n<h3 id=\"create-a-new-post\"><a class=\"anchor\" href=\"#create-a-new-post\">#</a> Create a new post</h3>\n<figure class=\"highlight bash\"><figcaption data-lang=\"bash\"><span>h</span></figcaption><table><tr><td data-num=\"1\"></td><td><pre>$ hexo new <span class=\"token string\">\"My New Post\"</span></pre></td></tr></table></figure><p>More info: <span class=\"exturl\" data-url=\"aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s\">Writing</span></p>\n<h3 id=\"run-server\"><a class=\"anchor\" href=\"#run-server\">#</a> Run server</h3>\n<figure class=\"highlight bash\"><figcaption data-lang=\"bash\"><span>h</span></figcaption><table><tr><td data-num=\"1\"></td><td><pre>$ hexo server</pre></td></tr></table></figure><p>More info: <span class=\"exturl\" data-url=\"aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=\">Server</span></p>\n<h3 id=\"generate-static-files\"><a class=\"anchor\" href=\"#generate-static-files\">#</a> Generate static files</h3>\n<figure class=\"highlight bash\"><figcaption data-lang=\"bash\"><span>h</span></figcaption><table><tr><td data-num=\"1\"></td><td><pre>$ hexo generate</pre></td></tr></table></figure><p>More info: <span class=\"exturl\" data-url=\"aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s\">Generating</span></p>\n<h3 id=\"deploy-to-remote-sites\"><a class=\"anchor\" href=\"#deploy-to-remote-sites\">#</a> Deploy to remote sites</h3>\n<figure class=\"highlight bash\"><figcaption data-lang=\"bash\"><span>h</span></figcaption><table><tr><td data-num=\"1\"></td><td><pre>$ hexo deploy</pre></td></tr></table></figure><p>More info: <span class=\"exturl\" data-url=\"aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s\">Deployment</span></p>\n",
