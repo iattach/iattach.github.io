@@ -8,7 +8,7 @@
     <author>
       <name>iattach</name>
     </author>
-    <updated>2021-12-21T22:49:14.000Z</updated>
+    <updated>2021-12-22T09:27:05.000Z</updated>
     <category term="Game" />
     <category term="Animée" />
     <category term="Life" />
@@ -17,6 +17,166 @@
     <category term="动漫" />
     <category term="生活" />
     <category term="学习" />
+    <entry>
+        <id>https://hexo.iattach.top/2021/12/22/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-qq%E6%9C%BA%E5%99%A8%E4%BA%BA/</id>
+        <title>腾讯win云服务器 + pcr机器人(hoshino_xcw),从头开始手动装全过程记录</title>
+        <link rel="alternate" href="https://hexo.iattach.top/2021/12/22/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-qq%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;因为手里有多个服务器，机器人某天挂了，手残把服务器换镜像了。。。有感而发，开始记录下过程供自己日后参考。&lt;/p&gt;
+&lt;h1 id=&#34;腾讯云服务器初始设置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#腾讯云服务器初始设置&#34;&gt;#&lt;/a&gt; 腾讯云服务器初始设置&lt;/h1&gt;
+&lt;p&gt;服务器镜像最好选 windows server 2012。windows 是因为对小白，和咸鱼（指我）友好。2012 是在 windows8 不内置 defender，而 2016 和 2019 都是在 win10 基础上改的，都内置 windows defender，开启之后加远程桌面，任务管理器显示内存占用达到 50%。懒得去找 2016/2019 怎么关了，就先用 2012 吧。&lt;/p&gt;
+&lt;p&gt;服务器第一次或者重装镜像后，都需要重置密码，方便远程桌面登陆。&lt;/p&gt;
+&lt;h2 id=&#34;关闭异常登陆通知&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关闭异常登陆通知&#34;&gt;#&lt;/a&gt; 关闭异常登陆通知&lt;/h2&gt;
+&lt;p&gt;因为异地登陆云服务器，结果发了一堆邮件。参考&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kb2N1bWVudC9wcm9kdWN0LzI5Ni82MDA2MQ==&#34;&gt; https://cloud.tencent.com/document/product/296/60061&lt;/span&gt;，但是不可以关闭异常登录检测。&lt;/p&gt;
+&lt;p&gt;在&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jb25zb2xlLmNsb3VkLnRlbmNlbnQuY29tL2N3cC9tYW5hZ2UvbG9naW5Mb2c=&#34;&gt; https://console.cloud.tencent.com/cwp/manage/loginLog&lt;/span&gt; 中，对登陆历史中自己的 ip 地址加入白名单。&lt;/p&gt;
+&lt;h2 id=&#34;端口开放&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#端口开放&#34;&gt;#&lt;/a&gt; 端口开放&lt;/h2&gt;
+&lt;p&gt;来源可以默认 0.0.0.0/0 对所有 ip 及其端口开放。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;端口&lt;/th&gt;
+&lt;th&gt;协议&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;TCP&lt;/td&gt;
+&lt;td&gt;FTP 用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;TCP&lt;/td&gt;
+&lt;td&gt;linux 远程登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;80&lt;/td&gt;
+&lt;td&gt;TCP&lt;/td&gt;
+&lt;td&gt;HTTP 端口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;TCP&lt;/td&gt;
+&lt;td&gt;HTTPS 用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3389&lt;/td&gt;
+&lt;td&gt;TCP&lt;/td&gt;
+&lt;td&gt;windows 远程登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8080&lt;/td&gt;
+&lt;td&gt;TCP&lt;/td&gt;
+&lt;td&gt;用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9222&lt;/td&gt;
+&lt;td&gt;TCP&lt;/td&gt;
+&lt;td&gt;MySQL 用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ALL&lt;/td&gt;
+&lt;td&gt;ICMP&lt;/td&gt;
+&lt;td&gt;放通 ping&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img data-src=&#34;/assets/wallpaper-2311325.jpg&#34; alt=&#34;Caption&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;软件安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软件安装&#34;&gt;#&lt;/a&gt; 软件安装&lt;/h2&gt;
+&lt;p&gt;所有的下载当然先从内置的 IE11 开始，打开后选&lt;strong&gt;不使用推荐设置&lt;/strong&gt;。然后&lt;strong&gt; Internet 选项&lt;/strong&gt;下的&lt;strong&gt;安全&lt;/strong&gt;将允许级别调为中。使用&lt;strong&gt;推荐设置&lt;/strong&gt;的话，这里是灰色不可调的，误选的话，在&lt;strong&gt;安全&lt;/strong&gt;选项卡下面&lt;strong&gt;自定义级别&lt;/strong&gt;下面拉到最下面将&lt;strong&gt;文件下载&lt;/strong&gt;选择启用。&lt;/p&gt;
+&lt;p&gt;PS：传文件可以使用&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90cmFuc2Zlci5zaC8=&#34;&gt; https://transfer.sh/&lt;/span&gt;，国内外访问都很快。远程登陆传文件实在太慢了。&lt;/p&gt;
+&lt;h3 id=&#34;浏览器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#浏览器&#34;&gt;#&lt;/a&gt; 浏览器&lt;/h3&gt;
+&lt;p&gt;chrome 内存泄漏，且因为国内问题无法下载。建议使用 firefox 或者 edge，注意 firefox 国内版本和国际版账户不通用。&lt;/p&gt;
+&lt;h3 id=&#34;python&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#python&#34;&gt;#&lt;/a&gt; python&lt;/h3&gt;
+&lt;p&gt;python 下载国内镜像：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ucG0udGFvYmFvLm9yZy9taXJyb3JzL3B5dGhvbi8=&#34;&gt;https://npm.taobao.org/mirrors/python/&lt;/span&gt;，最新版本选择 python-x.x.x-amd64.exe。&lt;/p&gt;
+&lt;p&gt;安装注意勾选 ADD Python x.x to PATH。&lt;/p&gt;
+&lt;h3 id=&#34;git&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git&#34;&gt;#&lt;/a&gt; Git&lt;/h3&gt;
+&lt;p&gt;git for windows 国内镜像：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ucG0udGFvYmFvLm9yZy9taXJyb3JzL2dpdC1mb3Itd2luZG93cy8=&#34;&gt;https://npm.taobao.org/mirrors/git-for-windows/&lt;/span&gt;, 下载 Git-x.xx.x-64-bit.exe&lt;/p&gt;
+&lt;p&gt;pip 安装国内源设置，参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTExMDc1NzUvYXJ0aWNsZS9kZXRhaWxzLzEwOTkwMTA4Ng==&#34;&gt;https://blog.csdn.net/u011107575/article/details/109901086&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;使用配置文件，一次解决&lt;/p&gt;
+&lt;p&gt;windows 下，直接在 C:\Users\Administrator 目录中创建一个 pip 目录，再新建文件 pip.ini，填入以下代码。（这里用的是清华的数据）&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# pip.ini&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;global&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;index-url &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; https://pypi.tuna.tsinghua.edu.cn/simple &lt;span class=&#34;token comment&#34;&gt;#设置源地址&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;install&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;trusted-host &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; pypi.tuna.tsinghua.edu.cn &lt;span class=&#34;token comment&#34;&gt;#信任源地址&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;notepad&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#notepad&#34;&gt;#&lt;/a&gt; notepad++&lt;/h3&gt;
+&lt;p&gt;代码文件轻量编辑器，暂时没发现国内源。虽然国内网站有但是会捆绑软件之类，有条件建议下载官方安装包（打开比较慢）：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ub3RlcGFkLXBsdXMtcGx1cy5vcmcvZG93bmxvYWRzLw==&#34;&gt;https://notepad-plus-plus.org/downloads/&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;ffmpeg-非必须&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ffmpeg-非必须&#34;&gt;#&lt;/a&gt; ffmpeg 非必须&lt;/h3&gt;
+&lt;p&gt;参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLmdvLWNxaHR0cC5vcmcvZ3VpZGUvcXVpY2tfc3RhcnQuaHRtbCMlRTYlOUIlQjQlRTYlOTYlQjA=&#34;&gt;https://docs.go-cqhttp.org/guide/quick_start.html#%E6%9B%B4%E6%96%B0&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;为了支持任意格式的语音发送，你需要安装 ffmpeg 。&lt;/p&gt;
+&lt;p&gt;从&lt;a href=&#34;%E8%BF%99%E9%87%8C&#34;&gt; https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z&lt;/a&gt; 下载并解压，并为 bin 这个文件夹添加环境变量。&lt;/p&gt;
+&lt;p&gt;如果遇到下载速度缓慢的问题可以用&lt;a href=&#34;%E8%BF%99%E4%B8%AA%E6%BA%90&#34;&gt; https://downloads.go-cqhttp.org/ffmpeg-release-full.7z&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;然后在 cmd 输入 (不能使用 powershell）&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;setx /M &lt;span class=&#34;token environment constant&#34;&gt;PATH&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;C:\Program Files&lt;span class=&#34;token entity&#34; title=&#34;\f&#34;&gt;\f&lt;/span&gt;fmpeg&lt;span class=&#34;token entity&#34; title=&#34;\b&#34;&gt;\b&lt;/span&gt;in;%PATH%&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;自行将这个指令中的 C:\Program Files 替换成你的解压目录。&lt;/p&gt;
+&lt;h1 id=&#34;部署pcr-qq机器人&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#部署pcr-qq机器人&#34;&gt;#&lt;/a&gt; 部署 pcr qq 机器人&lt;/h1&gt;
+&lt;p&gt;机器人采用的是 hoshino_xcw 为基础，后续逐渐添加其他插件。以上软件部分及本部分参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3BjcmJvdC9ob3NoaW5vX3hjdy93aWtpLyVFOSU4MyVBOCVFNyVCRCVCMiVFNiVCNSU4MSVFNyVBOCU4QiVFRiVCQyU4QyVFNCVCOCVCQiVFOCVBNiU4MSVFNSU4RiU4MiVFOCU4MCU4MyVFNiU5NiU4NyVFNiVBMSVBMw==&#34;&gt;https://github.com/pcrbot/hoshino_xcw/wiki/%E9%83%A8%E7%BD%B2%E6%B5%81%E7%A8%8B&lt;/span&gt; 和 &lt;a href=&#34;windows%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%8C%E5%89%AF%E5%8F%82%E8%80%83&#34;&gt;https://github.com/Soung2279/haru-bot-setup/&lt;/a&gt;，注意 go-cqhttp,hoshino_xcw 与 yobot 分别独立，可以单独安装互不干扰。&lt;/p&gt;
+&lt;h2 id=&#34;go-cqhttp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#go-cqhttp&#34;&gt;#&lt;/a&gt; go-cqhttp&lt;/h2&gt;
+&lt;p&gt;这个软件是用来获取 qq 消息的，参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLmdvLWNxaHR0cC5vcmcvZ3VpZGUvcXVpY2tfc3RhcnQuaHRtbCMlRTYlOUIlQjQlRTYlOTYlQjA=&#34;&gt;https://docs.go-cqhttp.org/guide/quick_start.html#%E6%9B%B4%E6%96%B0&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;从&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL01yczRzL2dvLWNxaHR0cC9yZWxlYXNlcw==&#34;&gt; https://github.com/Mrs4s/go-cqhttp/releases&lt;/span&gt; 下载放在单独的目录下，&lt;strong&gt;go-cqhttp_windows_amd64.exe&lt;/strong&gt;，可以用 github 文件加速之类的工具加快下载速度。&lt;/p&gt;
+&lt;p&gt;启动先直接打开，配置文件选择&lt;strong&gt; 3：反向 Websocket 通信&lt;/strong&gt;，然后会自动生成配置文件。配置好后，再启动，选择手机扫码登陆。下面的几个命令可以用在 exe 同一目录下的 bat 脚本运行。注意 exe 文件名须一致。&lt;/p&gt;
+&lt;h3 id=&#34;配置文件configyml-devicejson&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置文件configyml-devicejson&#34;&gt;#&lt;/a&gt; 配置文件 config.yml + device.json&lt;/h3&gt;
+&lt;p&gt;文件自动生成后，需要修改第一行 qq 号为机器人的 qq 号和最后的 ws-reverse 部分如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;servers&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;# 反向 WS 设置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;# 8080 为 HoshinoBot 默认端口号&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token key atrule&#34;&gt;ws-reverse&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token key atrule&#34;&gt;universal&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; ws&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;//127.0.0.1&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;8080/ws/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token key atrule&#34;&gt;api&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token key atrule&#34;&gt;event&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token key atrule&#34;&gt;reconnect-interval&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token key atrule&#34;&gt;middlewares&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token important&#34;&gt;*default&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 引用默认中间件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;# 9222 为 yobot 默认端口号&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token key atrule&#34;&gt;ws-reverse&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token key atrule&#34;&gt;universal&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; ws&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;//127.0.0.1&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;9222/ws/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token key atrule&#34;&gt;api&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token key atrule&#34;&gt;event&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token key atrule&#34;&gt;reconnect-interval&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token key atrule&#34;&gt;middlewares&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token important&#34;&gt;*default&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 引用默认中间件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;来源：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jbi5wY3Jib3QuY29tL2RlcGxveS1ob3NoaW5vYm90LW9uLWNlbnRvcy8=&#34;&gt;https://cn.pcrbot.com/deploy-hoshinobot-on-centos/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;修改后再次运行 go-cqhttp，为了玄学避免风控，可以更改 device.json 中 protocol 值 0 为 1，然后再启动 go-cqhttp，这样机器人 qq 头像一直显示为手机在线，但是这会和手机端登陆 bot 账号冲突，因为一个 qq 不能同时在两个手机端登陆。&lt;/p&gt;
+&lt;p&gt;启动后，应该会显示连接到反向 ws 服务器出现错误之类的，这是正常现象，因为 yobot 和 qq 机器人主体还未启动。这时候在机器人 qq 加入的 qq 群发送消息或者私聊，会显示在 go-cqhttp 运行的窗口内。&lt;/p&gt;
+&lt;p&gt;注意：这个 json 在第一次用 go-cqhttp 登陆 qq 后才会有。&lt;/p&gt;
+&lt;h3 id=&#34;加快启动速度命令bat脚本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#加快启动速度命令bat脚本&#34;&gt;#&lt;/a&gt; 加快启动速度命令 + bat 脚本&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;.&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;go-cqhttp.exe faststart&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;更新命令bat脚本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更新命令bat脚本&#34;&gt;#&lt;/a&gt; 更新命令 + bat 脚本&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;.&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;go-cqhttp.exe update https://github.com.cnpmjs.org&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;安装hoshinobot_xcw&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装hoshinobot_xcw&#34;&gt;#&lt;/a&gt; 安装 HoshinoBot_xcw&lt;/h2&gt;
+&lt;p&gt;右击想要安装的目录路径，右击打开 git bash，输入&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; clone https://github.com.cnpmjs.org/sanshanya/hoshino_xcw.git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;安装yobot&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装yobot&#34;&gt;#&lt;/a&gt; 安装 yobot&lt;/h2&gt;
+&lt;p&gt;请于&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3l1dWRpL3lvYm90L3JlbGVhc2VzL3RhZy92My42LjE0&#34;&gt; https://github.com/yuudi/yobot/releases/tag/v3.6.14&lt;/span&gt; 下载 yobot 便携版：yobot-.RELEASE_VER.v.-windows64.zip，解压后放在单独的目录下。双击 “yobot.exe” 启动服务&lt;/p&gt;
+&lt;p&gt;以下部分内容来源参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly95b2JvdC53aW4vaW5zdGFsbC9XaW5kb3dzLWdvY3FodHRwLw==&#34;&gt;https://yobot.win/install/Windows-gocqhttp/&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;验证安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#验证安装&#34;&gt;#&lt;/a&gt; 验证安装&lt;/h3&gt;
+&lt;p&gt;向机器人发送 “version”，机器人会回复当前版本&lt;/p&gt;
+&lt;p&gt;向机器人私聊发送 “登录”，机器人会回复登录链接（第一个发送登录的人自动获得主人权限）&lt;/p&gt;
+&lt;p&gt;向机器人发送 “重启”（需要权限），机器人会重启&lt;/p&gt;
+&lt;h3 id=&#34;yobot网页设置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#yobot网页设置&#34;&gt;#&lt;/a&gt; yobot 网页设置&lt;/h3&gt;
+&lt;p&gt;在私聊发送 “登陆” 后，打开网页设置密码。然后点击左上角返回，在设置项设置基本信息及 boss 血量。&lt;/p&gt;
+&lt;p&gt;截止 2021-11：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;阶段&lt;/th&gt;
+&lt;th&gt;起始周目数&lt;/th&gt;
+&lt;th&gt;一王&lt;/th&gt;
+&lt;th&gt;二王&lt;/th&gt;
+&lt;th&gt;三王&lt;/th&gt;
+&lt;th&gt;四王&lt;/th&gt;
+&lt;th&gt;五王&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1 阶段&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;6000000&lt;/td&gt;
+&lt;td&gt;8000000&lt;/td&gt;
+&lt;td&gt;10000000&lt;/td&gt;
+&lt;td&gt;12000000&lt;/td&gt;
+&lt;td&gt;15000000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2 阶段&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;6000000&lt;/td&gt;
+&lt;td&gt;8000000&lt;/td&gt;
+&lt;td&gt;10000000&lt;/td&gt;
+&lt;td&gt;12000000&lt;/td&gt;
+&lt;td&gt;15000000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3 阶段&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;7000000&lt;/td&gt;
+&lt;td&gt;9000000&lt;/td&gt;
+&lt;td&gt;12000000&lt;/td&gt;
+&lt;td&gt;14000000&lt;/td&gt;
+&lt;td&gt;17000000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</content>
+        <category term="技术" scheme="https://hexo.iattach.top/categories/%E6%8A%80%E6%9C%AF/" />
+        <updated>2021-12-22T09:27:05.000Z</updated>
+    </entry>
     <entry>
         <id>https://hexo.iattach.top/2021/12/21/%E5%BA%94%E7%94%A8hexo-shoka%E4%B8%BB%E9%A2%98%E7%9A%84%E5%B0%8F%E5%9D%91/</id>
         <title>装 hexo + shoka主题 遇到的小坑</title>
