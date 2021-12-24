@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://hexo.iattach.top/2021/12/24/%E4%BD%BF%E7%94%A8gitlab-hexo-shoka%E5%BB%BA%E7%AB%8Bpages/</loc>
+    <lastmod>2021-12-24</lastmod>
+  </url>
+  <url>
+    <loc>https://hexo.iattach.top/2020/08/23/hello-world/</loc>
+    <lastmod>2021-12-24</lastmod>
+  </url>
+  <url>
+    <loc>https://hexo.iattach.top/2021/12/21/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/</loc>
+    <lastmod>2021-12-24</lastmod>
+  </url>
+  <url>
     <loc>https://hexo.iattach.top/2021/12/22/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-qq%E6%9C%BA%E5%99%A8%E4%BA%BA/</loc>
     <lastmod>2021-12-23</lastmod>
   </url>
@@ -21,10 +33,6 @@
     <lastmod>2021-12-21</lastmod>
   </url>
   <url>
-    <loc>https://hexo.iattach.top/2021/12/21/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/</loc>
-    <lastmod>2021-12-21</lastmod>
-  </url>
-  <url>
     <loc>https://hexo.iattach.top/2020/12/04/%E8%AE%A9%E5%B7%B4%E5%B0%94%E8%88%B0%E5%BE%BD%E6%9F%A5%E8%AF%81/</loc>
     <lastmod>2020-12-04</lastmod>
   </url>
@@ -34,10 +42,6 @@
   </url>
   <url>
     <loc>https://hexo.iattach.top/2020/08/23/create-site/</loc>
-    <lastmod>2020-08-23</lastmod>
-  </url>
-  <url>
-    <loc>https://hexo.iattach.top/2020/08/23/hello-world/</loc>
     <lastmod>2020-08-23</lastmod>
   </url>
 </urlset> 
