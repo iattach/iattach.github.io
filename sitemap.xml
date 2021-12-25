@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hexo.iattach.top/2021/12/25/hexo-shoka%E4%B8%BB%E9%A2%98%E5%8A%A0%E5%85%A5live2D/</loc>
+    
+    <lastmod>2021-12-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hexo.iattach.top/live2d-widget/demo/login.html</loc>
+    
+    <lastmod>2021-12-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hexo.iattach.top/live2d-widget/demo/demo.html</loc>
+    
+    <lastmod>2021-12-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hexo.iattach.top/2021/12/24/hoshino-xcw-pcrbot%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E3%80%81%E8%AE%BE%E7%BD%AE%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2021-12-25</lastmod>
@@ -101,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://hexo.iattach.top/comment/index.html</loc>
+    <loc>https://hexo.iattach.top/donate/index.html</loc>
     
     <lastmod>2021-11-09</lastmod>
     
@@ -111,6 +138,15 @@
   
   <url>
     <loc>https://hexo.iattach.top/bangumi/index.html</loc>
+    
+    <lastmod>2021-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hexo.iattach.top/comment/index.html</loc>
     
     <lastmod>2021-11-09</lastmod>
     
@@ -137,6 +173,15 @@
   </url>
   
   <url>
+    <loc>https://hexo.iattach.top/rss/index.html</loc>
+    
+    <lastmod>2021-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hexo.iattach.top/music/index.html</loc>
     
     <lastmod>2021-11-09</lastmod>
@@ -155,16 +200,7 @@
   </url>
   
   <url>
-    <loc>https://hexo.iattach.top/donate/index.html</loc>
-    
-    <lastmod>2021-11-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hexo.iattach.top/rss/index.html</loc>
+    <loc>https://hexo.iattach.top/video/index.html</loc>
     
     <lastmod>2021-11-09</lastmod>
     
@@ -174,15 +210,6 @@
   
   <url>
     <loc>https://hexo.iattach.top/theme-sakura/index.html</loc>
-    
-    <lastmod>2021-11-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hexo.iattach.top/video/index.html</loc>
     
     <lastmod>2021-11-09</lastmod>
     
