@@ -7,6 +7,16 @@
     "home_page_url": "https://hexo.iattach.top",
     "items": [
         {
+            "id": "https://hexo.iattach.top/2021/12/26/QQ%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6%E5%A4%B9Group2%E6%B8%85%E7%90%86/",
+            "url": "https://hexo.iattach.top/2021/12/26/QQ%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6%E5%A4%B9Group2%E6%B8%85%E7%90%86/",
+            "title": "QQ图片文件夹Group2清理",
+            "date_published": "2021-12-26T17:13:01.000Z",
+            "content_html": "<p>参考：<span class=\"exturl\" data-url=\"aHR0cHM6Ly9iYnMuc2FyYWJhMXN0LmNvbS8yYi90aHJlYWQtMjAwOTE4Mi0xLTEuaHRtbA==\">https://bbs.saraba1st.com/2b/thread-2009182-1-1.html</span></p>\n<p>QQ 的自带清理工具无法扫描到 Group2 文件夹，QQ Group2 整个文件夹超级大打开都要半天。但是如果只是全清空的话包括近期的所有群图片就都没了。</p>\n<p>但是 tim 自带的清理工具又扫不到这个文件夹，最后通过在文件夹里面建立一个链接解决了。</p>\n<p>在管理员权限的 cmd 里进入 Image 文件夹，然后运行</p>\n<figure class=\"highlight bash\"><figcaption data-lang=\"bash\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre>mklink /d Group  .<span class=\"token punctuation\">\\</span>Group2</pre></td></tr></table></figure><p>建立一个 Group 到 Group2 的链接，之后再打开自带的文件清理器就能扫到这个文件夹了。</p>\n",
+            "tags": [
+                "技术"
+            ]
+        },
+        {
             "id": "https://hexo.iattach.top/2021/12/25/hexo-shoka%E4%B8%BB%E9%A2%98%E5%8A%A0%E5%85%A5live2D/",
             "url": "https://hexo.iattach.top/2021/12/25/hexo-shoka%E4%B8%BB%E9%A2%98%E5%8A%A0%E5%85%A5live2D/",
             "title": "hexo - shoka主题加入live2D",
