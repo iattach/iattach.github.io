@@ -173,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://hexo.iattach.top/lab/index.html</loc>
+    <loc>https://hexo.iattach.top/comment/index.html</loc>
     
     <lastmod>2021-11-09</lastmod>
     
@@ -191,15 +191,6 @@
   </url>
   
   <url>
-    <loc>https://hexo.iattach.top/about/index.html</loc>
-    
-    <lastmod>2021-11-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://hexo.iattach.top/client/index.html</loc>
     
     <lastmod>2021-11-09</lastmod>
@@ -209,16 +200,7 @@
   </url>
   
   <url>
-    <loc>https://hexo.iattach.top/comment/index.html</loc>
-    
-    <lastmod>2021-11-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hexo.iattach.top/donate/index.html</loc>
+    <loc>https://hexo.iattach.top/about/index.html</loc>
     
     <lastmod>2021-11-09</lastmod>
     
@@ -236,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://hexo.iattach.top/tags/index.html</loc>
+    <loc>https://hexo.iattach.top/lab/index.html</loc>
     
     <lastmod>2021-11-09</lastmod>
     
@@ -254,15 +236,6 @@
   </url>
   
   <url>
-    <loc>https://hexo.iattach.top/rss/index.html</loc>
-    
-    <lastmod>2021-11-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://hexo.iattach.top/theme-sakura/index.html</loc>
     
     <lastmod>2021-11-09</lastmod>
@@ -272,7 +245,34 @@
   </url>
   
   <url>
+    <loc>https://hexo.iattach.top/tags/index.html</loc>
+    
+    <lastmod>2021-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hexo.iattach.top/video/index.html</loc>
+    
+    <lastmod>2021-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hexo.iattach.top/rss/index.html</loc>
+    
+    <lastmod>2021-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hexo.iattach.top/donate/index.html</loc>
     
     <lastmod>2021-11-09</lastmod>
     
