@@ -100,6 +100,7 @@ Disable DelayedAutoStart
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1 id=&#34;错误&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#错误&#34;&gt;#&lt;/a&gt; 错误&lt;/h1&gt;
 &lt;p&gt;服务器 {8CFC164F-4BE5-4FDD-94E9-E2AF73ED4A19} 没有在要求的超时时间内向 DCOM 注册。&lt;/p&gt;
+&lt;p&gt;未找到解决办法，组策略关闭失败，跟 webexperience 小组件有关。&lt;/p&gt;
  ]]></description>
         </item>
         <item>
